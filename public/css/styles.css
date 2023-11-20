@@ -1,0 +1,156 @@
+@font-face {
+    font-family: font1;
+    src: url('../assets/fonts/EmojiOneColor.otf') format("opentype");
+}
+
+@font-face {
+    font-family: font2;
+    src: url('../assets/fonts/Inter-VariableFont_slnt.ttf') format("opentype");
+}
+
+
+/* GLOBALS */
+.btn-primary {
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    border-color: #ff6600;
+    background-color: #ff6600;
+}
+
+.text-invalid { 
+    width: 100%;
+    /* margin-top: 0.25rem; */
+    font-size: 0.875em;
+    color: #fd5c70;
+}  
+
+.bg-blue {
+    background-color: #0078ff;
+}
+
+.bg-gary {
+    background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
+}
+/* ** */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: font2;
+    /* background: rgb(241,241,241); */
+    background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
+}
+
+.text-oragne {
+    color: #ff6600;
+}
+
+main {
+    padding: 0 1rem; 
+    /*  background: rgb(241,241,241);
+    background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 69%); */
+}
+
+.login-hero {
+    
+}
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha {
+    position: absolute;
+    width: 13%;
+    z-index: 10;
+    right: 10%;
+    top: 26%;
+}
+
+.login {
+    width: 20rem;
+}
+
+.card {
+    border-radius: .80rem;
+    background-color: white;
+    border: none;
+}
+
+.card-header {
+    color: white;
+    border-top-right-radius: .80rem !important;
+    border-top-left-radius: .80rem !important;
+    background-color: #0078ff;
+    border-color: #0078ff;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+
+.login-input {
+    border-radius: 0px;
+    border-top: none;
+    border-left: none; 
+    border-right: none;
+    border-bottom: 2px solid #7c7c7c;
+    padding: 0.375rem 0rem
+}
+
+/* *** DASHBOARD *** */
+.dash-right {
+    background: url('../assets/dash/back1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.flag { 
+    cursor: pointer;
+    text-align: center;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.flag img {
+    width: 55%;
+    height: auto;
+}
+
+.flag:hover {
+    filter: grayscale(0%);
+    color: #0078ff;
+}
+
+/* **** */
+
+@media (max-width: 864px) {
+    nav {
+        justify-content: center;
+    }
+
+    .login-hero {
+        display: none !important;
+    }
+
+    .login-container {
+        margin-top: 5rem;
+    }
+
+    .flecha {
+        display: none;
+    }
+}
+
+@media (max-width: 1452px) {
+    .flecha {
+        display: none;
+    }
+}
