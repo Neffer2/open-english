@@ -4,7 +4,7 @@
         <h4 class="text-center">Redime aqu&iacute; tu bono</h4>
     </div>
     <div class="card">
-        <div class="card-header text-center">
+        <div class="login-card-header text-center">
             <h3 class="m-0">Iniciar Sesi&oacute;n</h3>
         </div>
         <div class="card-body px-4">

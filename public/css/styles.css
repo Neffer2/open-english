@@ -19,10 +19,17 @@
 
 .text-invalid { 
     width: 100%;
-    /* margin-top: 0.25rem; */
     font-size: 0.875em;
     color: #fd5c70;
-}  
+}
+
+.text-oragne {
+    color: #ff6600;
+}
+
+.text-blue {
+    color: #0078ff;
+}
 
 .bg-blue {
     background-color: #0078ff;
@@ -30,6 +37,14 @@
 
 .bg-gary {
     background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
+}
+
+.rounded {
+    border-radius: .80rem !important;
+}
+
+th {
+    background-color: rgb(241,241,241) !important;
 }
 /* ** */
 
@@ -45,9 +60,40 @@ body {
     background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
 }
 
-.text-oragne {
-    color: #ff6600;
+/* NAV */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background-color: white;
 }
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-menu {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.item-menu img {
+    width: 4%;
+    cursor: pointer;
+}
+
+.item-menu a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ** */
 
 main {
     padding: 0 1rem; 
@@ -77,14 +123,14 @@ main {
 .login {
     width: 20rem;
 }
-
+ 
 .card {
     border-radius: .80rem;
     background-color: white;
     border: none;
 }
 
-.card-header {
+.login-card-header {
     color: white;
     border-top-right-radius: .80rem !important;
     border-top-left-radius: .80rem !important;
@@ -113,7 +159,7 @@ main {
 }
 
 .flag { 
-    cursor: pointer;
+    cursor: pointer; 
     text-align: center;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
@@ -129,11 +175,26 @@ main {
     color: #0078ff;
 }
 
+.dash-title {
+    padding: 2rem 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.dash-title img {
+    width: 3%;
+}
+
 /* **** */
 
 @media (max-width: 864px) {
-    nav {
-        justify-content: center;
+    .toolbar {
+        justify-content: center !important;
+    }
+
+    .nav-menu {
+        display: none;
     }
 
     .login-hero {

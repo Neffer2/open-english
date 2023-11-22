@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app') 
     @section('content')
-        @livewire('dash')
+        @livewire('dash', ['pais' => $pais])
     @endsection
