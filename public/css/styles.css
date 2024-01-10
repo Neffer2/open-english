@@ -101,9 +101,10 @@ main {
     background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 69%); */
 }
 
+/* 
 .login-hero {
-    
-}
+    No tenia información .login-hero 
+} */
 
 .login-container {
     position: relative;
@@ -186,6 +187,25 @@ main {
     width: 3%;
 }
 
+.table {
+    text-align: center;
+}
+
+.btn-info {
+    color: white;
+    background-color: #0078ff;
+    height: 50% !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-check-input{
+    border-color: black;
+}
 /* **** */
 
 @media (max-width: 864px) {

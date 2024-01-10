@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController; 
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +13,9 @@ use App\Http\Controllers\MainController;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
-Route::get('/', [MainController::class, 'flags'])->middleware(['auth'])->name('/');  
-Route::get('/dashboard/{pais}', [MainController::class, 'index'])->middleware(['auth'])->name('dashboard');  
-Route::get('/dashboard', [MainController::class, 'flags'])->middleware(['auth']);  
 
-require __DIR__.'/auth.php';
+Route::get('/', [MainController::class, 'flags'])->middleware(['auth'])->name('/');
+Route::get('/dashboard/{pais}', [MainController::class, 'index'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [MainController::class, 'flags'])->middleware(['auth']);
+Route::get('/create-informe', [MainController::class, 'createInformes'])->middleware(['auth'])->name('create-informe');
+require __DIR__ . '/auth.php';

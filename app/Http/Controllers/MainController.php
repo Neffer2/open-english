@@ -11,9 +11,14 @@ class MainController extends Controller
     }
 
     public function flags(){
-        $flags = ['Argentina', 'Bolivia', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
-        'EEUU', 'Guatemala', 'México', 'Perú', 'República Dominicana', 'Uruguay'];
+
+        $flags = app('paises');
 
         return view('flags', ['flags' => $flags]);
+    }
+
+    public function createInformes(){
+        
+        return view('create-informe');
     }
 } 
