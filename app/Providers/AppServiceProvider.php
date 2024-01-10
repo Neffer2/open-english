@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         config(['paises' => [
-            'Argentina', 'Bolivia', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
+            'Argentina', 'Bolivia','Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
             'EEUU', 'Guatemala', 'México', 'Perú', 'República Dominicana', 'Uruguay'
         ]]);
     }

@@ -13,8 +13,8 @@
                             <label for="pais">Pais:</label>
                             <br>
                             {{-- <input type="text" id="pais" wire:model="pais" class="form-control" required> --}}
-                            <select name="pais" class="dropdown" wire:model="pais" required>
-                                <option value="">Selecciona un país</option>
+                            <select name="pais" class="form-control" wire:model="pais" required>
+                                <option value="">Selecciona un país ↓</option>
                                 @foreach ($paises as $country)
                                     <option value="{{ $country }}" {{ $country == $pais ? 'selected' : '' }}>
                                         {{ $country }}
@@ -24,7 +24,12 @@
                         </div>
                         <div class="form-group">
                             <label for="idioma">Idioma:</label>
-                            <input type="text" id="idioma" wire:model="idioma" class="form-control" required>
+                            <select id="idioma" wire:model="idioma" class="form-control" required>
+                                <option value="">Selecciona un idioma ↓</option>
+                                <option value="Español" {{ $idioma == 'Español' ? 'selected' : '' }}>Español</option>
+                                <option value="Inglés" {{ $idioma == 'Inglés' ? 'selected' : '' }}>Inglés</option>
+                                <option value="Portugues" {{ $idioma == 'Portugues' ? 'selected' : '' }}>Portugues</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="email">Correo:</label>
