@@ -22,7 +22,9 @@
             <div class="nav-menu">
                 
                 <div class="item-menu">
-                    <a href="{{ route('create-informe') }}" class="btn btn-info">Crear Nuevo Informe</a>
+                    @if(Auth::user()->id == 1)
+                        <a href="{{ route('create-informe') }}" class="btn btn-info">Crear Nuevo Informe</a>
+                    @endif
                     <img src="{{ asset('assets/nav/volver.png') }}" title="Volver" alt="Icono de volver" onclick="location.href = '{{ route('/') }}';">
                     <img src="https://cdn.domestika.org/c_fill,dpr_1.0,f_auto,h_1200,pg_1,t_base_params,w_1200/v1586458582/project-covers/000/663/741/663741-original.png?1586458582"
                         alt="Icono de perfil" style="border-radius: 10rem;">

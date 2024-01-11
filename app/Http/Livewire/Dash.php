@@ -36,6 +36,17 @@ class Dash extends Component
         $this->redencion_count = Informes::where('pais', $this->pais)->where('redencion', 1)->count();
     }
 
+    public function updateField($id, $field, $value)
+{
+    $informe = Informes::find($id);
+    $informe->$field = $value === "1" ? 1 : null;
+    $informe->save();
+
+    // Update the counts and informes after a field is updated
+    $this->updateCounts();
+    $this->updateCountry();
+}
+
 
     public function render()
     {

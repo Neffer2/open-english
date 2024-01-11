@@ -7,7 +7,7 @@
                 </h3>
             </div>
             <div class="card-body p-4 bg-white rounded">
-                
+
                 <div class="dropdown-cointainer">
                     <label for="pais">Filtrar por país:</label>
                     <br>
@@ -41,9 +41,42 @@
                                 <td>{{ $data->pais }}</td>
                                 <td>{{ $data->idioma }}</td>
                                 <td>{{ $data->email }}</td>
-                                <td>{{ $data->open_rate ? 'Si' : 'No' }}</td>
-                                <td>{{ $data->click_rate ? 'Si' : 'No' }}</td>
-                                <td>{{ $data->redencion ? 'Si' : 'No' }}</td>
+                    
+                                <td>
+                                    @if (Auth::id() == 1)
+                                        <select
+                                            wire:change="updateField({{ $data->id }}, 'open_rate', $event.target.value)">
+                                            <option value="1" {{ $data->open_rate ? 'selected' : '' }}>Si</option>
+                                            <option value="null" {{ $data->open_rate ? '' : 'selected' }}>No</option>
+                                        </select>
+                                    @else
+                                        {{ $data->open_rate ? 'Si' : 'No' }}
+                                    @endif
+                                </td>
+                                <td>
+                                    @if (Auth::id() == 1)
+                                        <select
+                                            wire:change="updateField({{ $data->id }}, 'click_rate', $event.target.value)">
+                                            <option value="1" {{ $data->click_rate ? 'selected' : '' }}>Si
+                                            </option>
+                                            <option value="null" {{ $data->click_rate ? '' : 'selected' }}>No
+                                            </option>
+                                        </select>
+                                    @else
+                                        {{ $data->click_rate ? 'Si' : 'No' }}
+                                    @endif
+                                </td>
+                                <td>
+                                    @if (Auth::id() == 1)
+                                        <select
+                                            wire:change="updateField({{ $data->id }}, 'redencion', $event.target.value)">
+                                            <option value="1" {{ $data->redencion ? 'selected' : '' }}>Si</option>
+                                            <option value="null" {{ $data->redencion ? '' : 'selected' }}>No</option>
+                                        </select>
+                                    @else
+                                        {{ $data->redencion ? 'Si' : 'No' }}
+                                    @endif
+                                </td>
                             </tr>
                             @endforeach
                             </tr>
