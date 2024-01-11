@@ -17,5 +17,5 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController::class, 'flags'])->middleware(['auth'])->name('/');
 Route::get('/dashboard/{pais}', [MainController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard', [MainController::class, 'flags'])->middleware(['auth']);
-Route::get('/create-informe', [MainController::class, 'createInformes'])->middleware(['auth'])->name('create-informe');
+Route::get('/create-informe', [MainController::class, 'createInformes'])->middleware(['auth', 'checkUserId'])->name('create-informe');
 require __DIR__ . '/auth.php';
