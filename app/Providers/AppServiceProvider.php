@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,8 +28,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         config(['paises' => [
-            'Argentina', 'Bolivia','Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
-            'EEUU', 'Guatemala', 'México', 'Perú', 'República Dominicana', 'Uruguay'
+            'Argentina', 'Bolivia', 'Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
+            'EEUU', 'Guatemala', 'México', 'Perú', 'Portugal', 'República Dominicana', 'Uruguay'
         ]]);
+
+        Paginator::useBootstrap();
     }
 }

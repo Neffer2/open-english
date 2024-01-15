@@ -8,15 +8,17 @@
             </div>
 
             <div class="card-body p-4 bg-white rounded">
-                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilters"
-                    aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <label style="color: #626262"> | Filtros</label>
+                <label for="hamburger-menu">
+                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilters"
+                        aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu" name="hamburger-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <span style="color: #626262"> | Filtros</span>
+                </label>
                 <div class="collapse navbar-collapse" id="navbarFilters">
                     <label for="filtrar-email">Filtrar por email:</label>
                     <input name="filtrar-email" type="text" 
-                        placeholder="Buscar Email" class="form-control mb-3" wire:model.debounce.1000ms="search"> 
+                        placeholder="Buscar Email" class="form-control mb-3" wire:model.debounce.1500ms="search"> 
                     <label for="pais">Filtrar por país:</label>
                     <select name="pais" class="form-select" wire:model="pais" wire:change="updateCountry">
                         <option value="">Todos los países</option>

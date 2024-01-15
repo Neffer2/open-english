@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Informes;
 use Livewire\Component;
 
+
 class Dash extends Component
 {
     // Filled
