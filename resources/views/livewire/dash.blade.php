@@ -15,8 +15,8 @@
                 <label style="color: #626262"> | Filtros</label>
                 <div class="collapse navbar-collapse" id="navbarFilters">
                     <label for="filtrar-email">Filtrar por email:</label>
-                    <input name="filtrar-email" type="text" wire:model.debounce.500ms="search"
-                        placeholder="Buscar Email" class="form-control mb-3">
+                    <input name="filtrar-email" type="text" 
+                        placeholder="Buscar Email" class="form-control mb-3" wire:model.debounce.1000ms="search"> 
                     <label for="pais">Filtrar por país:</label>
                     <select name="pais" class="form-select" wire:model="pais" wire:change="updateCountry">
                         <option value="">Todos los países</option>
