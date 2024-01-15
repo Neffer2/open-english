@@ -18,7 +18,7 @@ class CreateInformesTable extends Migration
             $table->string('nombre');
             $table->string('pais');
             $table->string('idioma');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->boolean('open_rate')->nullable();
             $table->boolean('click_rate')->nullable(); ;
             $table->boolean('redencion')->nullable();   

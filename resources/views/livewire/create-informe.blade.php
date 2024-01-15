@@ -60,4 +60,8 @@
     window.addEventListener('formSubmitted', event => {
         alert('Informe agregado correctamente!');
     });
+
+    window.addEventListener('formError', event => {
+        alert('Error: ' + event.detail.errors.join(', '));
+    });
 </script>

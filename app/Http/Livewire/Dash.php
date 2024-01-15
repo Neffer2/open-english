@@ -13,6 +13,7 @@ class Dash extends Component
     // Useful bar
     public $paises;
     public $informes;
+    public $search = '';
 
     public $open_rate_count, $click_rate_count, $redencion_count;
 
@@ -29,6 +30,11 @@ class Dash extends Component
         $this->updateCounts();
     }
 
+    public function updatedSearch()
+    {
+        $this->render();
+    }
+
     private function updateCounts()
     {
         $this->open_rate_count = Informes::where('pais', $this->pais)->where('open_rate', 1)->count();
@@ -37,15 +43,15 @@ class Dash extends Component
     }
 
     public function updateField($id, $field, $value)
-{
-    $informe = Informes::find($id);
-    $informe->$field = $value === "1" ? 1 : null;
-    $informe->save();
+    {
+        $informe = Informes::find($id);
+        $informe->$field = $value === "1" ? 1 : null;
+        $informe->save();
 
-    // Update the counts and informes after a field is updated
-    $this->updateCounts();
-    $this->updateCountry();
-}
+        // Update the counts and informes after a field is updated
+        $this->updateCounts();
+        $this->updateCountry();
+    }
 
 
     public function render()
@@ -56,7 +62,9 @@ class Dash extends Component
             array_push($filtro, ['pais', $this->pais]);
         }
 
-        $this->informes = Informes::where($filtro)->get();
+        $this->informes = Informes::where($filtro)
+            ->where('email', 'like', '%' . $this->search . '%')
+            ->get();
 
         return view('livewire.dash', [
             'informes' => $this->informes,
