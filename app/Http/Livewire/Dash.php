@@ -73,7 +73,7 @@ class Dash extends Component
         $filtro = [];
 
         if ($this->pais == 'Todos') {
-            $this->informes = Informes::where('email', 'like', '%' . $this->search . '%')->paginate(5);
+            $this->informes = Informes::where('email', 'like', '%' . $this->search . '%')->paginate(10);
         } else {
 
             if ($this->pais) {
@@ -82,7 +82,7 @@ class Dash extends Component
 
             $this->informes = Informes::where($filtro)
                 ->where('email', 'like', '%' . $this->search . '%')
-                ->paginate(5);
+                ->paginate(10);
         }
 
         return view('livewire.dash', [

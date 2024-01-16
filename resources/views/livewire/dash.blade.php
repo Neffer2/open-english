@@ -11,7 +11,7 @@
                 <label for="hamburger-menu">
                     <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilters"
                         aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu" name="hamburger-menu">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="bi bi-list navbar-toggler-icon"></i>
                     </button>
                     <span style="color: #626262"> | Filtros</span>
                 </label>
