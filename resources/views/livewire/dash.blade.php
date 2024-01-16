@@ -21,7 +21,7 @@
                         placeholder="Buscar Email" class="form-control mb-3" wire:model.debounce.1500ms="search"> 
                     <label for="pais">Filtrar por país:</label>
                     <select name="pais" class="form-select" wire:model="pais" wire:change="updateCountry">
-                        <option value="">Todos los países</option>
+                        <option value="Todos">Todos los países</option>
                         @foreach ($paises as $country)
                             <option value="{{ $country }}" {{ $country == $pais ? 'selected' : '' }}>
                                 {{ $country }}
@@ -44,7 +44,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
                                 @foreach ($informes as $data)
                             <tr>
                                 <td>{{ $data->nombre }}</td>
@@ -88,12 +87,13 @@
                                     @endif
                                 </td>
                             </tr>
-                            @endforeach
-                            </tr>
+                            @endforeach 
+                        
                         </tbody>
-                    </table>
+                    </table>    
+                    {{ $informes->links('vendor.pagination.bootstrap-4') }}
                     <br>
-                    <div>
+                    <div>   
                         Open Rate: {{ $open_rate_count }}
                         <br>
                         CTR: {{ $click_rate_count }}
