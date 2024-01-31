@@ -45,7 +45,7 @@
                                     <td>
                                         @if (Auth::id() == 1)
                                             <select
-                                                wire:change="updateField({{ $data->id }}, '', $event.target.value)">
+                                                wire:change="updateField({{ $data->id }}, 'open_rate', $event.target.value)">
                                                 <option value="1" {{ $data->open_rate ? 'selected' : '' }}>Si
                                                 </option>
                                                 <option value="null" {{ $data->open_rate ? '' : 'selected' }}>No
