@@ -61,8 +61,6 @@ class Dash extends Component
         $informe->$field = $value === "1" ? 1 : null;
         $informe->save();
 
-        // Update the counts and informes after a field is updated
-        $this->updateCounts();
         $this->updateCountry();
     }
 
