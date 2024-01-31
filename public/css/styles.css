@@ -214,7 +214,11 @@ main {
     width: 100%;
 }
 
-/* **** */
+.rates-container .btn {
+    width: 150px;
+}
+
+/* *** MEDIA QUERY * */
 
 @media (max-width: 864px) {
     .toolbar {
