@@ -77,23 +77,28 @@
                                                 <option value="null" {{ $data->redencion ? '' : 'selected' }}>No
                                                 </option>
                                             </select>
+                                            {{-- Todo Crear funcion para guardar id, field, value 
+                                            Crear funcion para actualizar el campo --}}
                                         @else
                                             {{ $data->redencion ? 'Si' : 'No' }}
                                         @endif
                                     </td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
+
                     {{ $informes->links('vendor.pagination.bootstrap-4') }}
                     <br>
-                    <div>
-                        Open Rate: {{ $open_rate_count }}
-                        <br>
-                        CTR: {{ $click_rate_count }}
-                        <br>
-                        Redención: {{ $redencion_count }}
+                    <div class="rates-container">
+                        <div class="rates-count">
+                            Open Rate: {{ $open_rate_count }}
+                            <br>
+                            CTR: {{ $click_rate_count }}
+                            <br>
+                            Redención: {{ $redencion_count }}
+                        </div>
+                        <button class="btn btn-info" wire:click="applyChanges">Aplicar Cambios</button>
                     </div>
                     <div>
                     </div>

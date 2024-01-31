@@ -19,6 +19,8 @@ class Dash extends Component
     public $paises;
     protected $informes;
     public $search = '';
+    public $camposArr = [];
+    
 
     public $open_rate_count, $click_rate_count, $redencion_count;
 
@@ -57,13 +59,21 @@ class Dash extends Component
 
     public function updateField($id, $field, $value)
     {
-        $informe = Informes::find($id);
-        $informe->$field = $value === "1" ? 1 : null;
-        $informe->save();
-
-        // Update the counts and informes after a field is updated
-        $this->updateCountry();
+        $this->camposArr[] = ['id' => $id, 'field' => $field, 'value' => $value];
     }
+
+    public function applyChanges()
+{
+    foreach ($this->camposArr as $campo) {
+        $informe = Informes::find($campo['id']);
+        $informe->{$campo['field']} = $campo['value'] === "1" ? 1 : null;
+        $informe->save();
+    }
+    // Clear the array after applying the changes
+    $this->camposArr = [];
+    // Update the counts and informes after the fields are updated
+    $this->updateCountry();
+}
 
 
     public function render()

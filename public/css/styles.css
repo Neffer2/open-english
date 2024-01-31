@@ -17,7 +17,7 @@
     background-color: #ff6600;
 }
 
-.text-invalid { 
+.text-invalid {
     width: 100%;
     font-size: 0.875em;
     color: #fd5c70;
@@ -36,7 +36,7 @@
 }
 
 .bg-gary {
-    background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
+    background: linear-gradient(90deg, rgba(241, 241, 241, 1) 0%, rgba(244, 244, 244, 1) 48%);
 }
 
 .rounded {
@@ -44,8 +44,9 @@
 }
 
 th {
-    background-color: rgb(241,241,241) !important;
+    background-color: rgb(241, 241, 241) !important;
 }
+
 /* ** */
 
 * {
@@ -57,7 +58,7 @@ th {
 body {
     font-family: font2;
     /* background: rgb(241,241,241); */
-    background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 48%);
+    background: linear-gradient(90deg, rgba(241, 241, 241, 1) 0%, rgba(244, 244, 244, 1) 48%);
 }
 
 /* NAV */
@@ -93,10 +94,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 /* ** */
 
 main {
-    padding: 0 1rem; 
+    padding: 0 1rem;
     /*  background: rgb(241,241,241);
     background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(244,244,244,1) 69%); */
 }
@@ -124,7 +126,7 @@ main {
 .login {
     width: 20rem;
 }
- 
+
 .card {
     border-radius: .80rem;
     background-color: white;
@@ -146,7 +148,7 @@ main {
 .login-input {
     border-radius: 0px;
     border-top: none;
-    border-left: none; 
+    border-left: none;
     border-right: none;
     border-bottom: 2px solid #7c7c7c;
     padding: 0.375rem 0rem
@@ -159,10 +161,11 @@ main {
     background-repeat: no-repeat;
 }
 
-.flag { 
-    cursor: pointer; 
+.flag {
+    cursor: pointer;
     text-align: center;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
 
@@ -201,9 +204,16 @@ main {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.form-check-input{
+.form-check-input {
     border-color: black;
 }
+
+.rates-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* **** */
 
 @media (max-width: 864px) {
@@ -225,6 +235,18 @@ main {
 
     .flecha {
         display: none;
+    }
+
+    .rates-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .rates-container .btn {
+        margin-top: 10px;
+        width: 170px;
     }
 }
 
