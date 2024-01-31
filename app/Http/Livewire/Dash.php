@@ -61,6 +61,7 @@ class Dash extends Component
         $informe->$field = $value === "1" ? 1 : null;
         $informe->save();
 
+        // Update the counts and informes after a field is updated
         $this->updateCountry();
     }
 
@@ -70,7 +71,7 @@ class Dash extends Component
         $filtro = [];
 
         if ($this->pais == 'Todos') {
-            $this->informes = Informes::where('email', 'like', '%' . $this->search . '%')->paginate(10);
+            $this->informes = Informes::where('email', 'like', '%' . $this->search . '%')->paginate(25);
         } else {
 
             if ($this->pais) {
@@ -79,7 +80,7 @@ class Dash extends Component
 
             $this->informes = Informes::where($filtro)
                 ->where('email', 'like', '%' . $this->search . '%')
-                ->paginate(10);
+                ->paginate(25);
         }
 
         return view('livewire.dash', [
