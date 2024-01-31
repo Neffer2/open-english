@@ -44,7 +44,6 @@ class Dash extends Component
 
     private function updateCounts()
     {
-  
         if ($this->pais == 'Todos') {
             $this->open_rate_count = Informes::sum('open_rate');
             $this->click_rate_count = Informes::sum('click_rate');

@@ -8,14 +8,6 @@
             </div>
 
             <div class="card-body p-4 bg-white rounded">
-                <label for="hamburger-menu">
-                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFilters"
-                        aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-menu" name="hamburger-menu">
-                        <i class="bi bi-list navbar-toggler-icon"></i>
-                    </button>
-                    <span style="color: #626262"> | Filtros</span>
-                </label>
-                <div class="collapse navbar-collapse" id="navbarFilters">
                     <label for="filtrar-email">Filtrar por email:</label>
                     <input name="filtrar-email" type="text" 
                         placeholder="Buscar Email" class="form-control mb-3" wire:model.debounce.1500ms="search"> 
@@ -28,7 +20,6 @@
                             </option>
                         @endforeach
                     </select>
-                </div>
                 <br>
                 <div class="table-responsive">
                     <table class="table">
