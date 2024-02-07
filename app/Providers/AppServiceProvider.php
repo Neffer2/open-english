@@ -29,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
     {
         config(['paises' => [
             'Argentina', 'Bolivia', 'Brasil', 'Chile', 'Colombia', 'Costa Rica', 'Ecuador', 'España',
-            'EEUU', 'El Salvador', 'Guatemala', 'Honduras', 'México', 'Perú', 'Portugal', 'República Dominicana', 'Uruguay'
+            'EEUU', 'El Salvador', 'Guatemala', 'Honduras', 'México', 'Nicaragua', 'Panamá', 'Paraguay', 
+            'Perú', 'Portugal', 'Puerto Rico', 'República Dominicana', 'Uruguay', 'Venezuela'
         ]]);
 
         Paginator::useBootstrap();
